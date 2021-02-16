@@ -1,9 +1,12 @@
 package com.java8practise.ExceptionHandling;
 
+import java.io.IOException;
+
 /**
  * NOTES -
- * 1)Program execution stops wherever system.exit(1) is given.
- * It does not proceed further irrespective of try-catch or finally block.
+ * 1)Program execution does not stop whenever system.exit(1) is given in try/catch or finally block after the step of exception,
+ * it goes on to execute catch and finally provided system.exit is after the x/0 step
+ *
  *
  * 2)What if exception is thrown in catch block-
  * Program execution stops at the point of exception and navigates to execute finally block and printing exception message.
@@ -12,27 +15,40 @@ package com.java8practise.ExceptionHandling;
  *
  * **/
 
-public class ExceptionChecks {
+public class ExceptionChecks  {
 
-    protected void methodExceptionTest() {
+    public void methodExceptionTest()  {
         System.out.println("Exception Test Method");
 
         int x = 2;
 
         try {
+
             System.out.println("Try Block");
+
             int y = x / 0;
 
-        } catch (ArithmeticException e) {
-            System.out.println("Catch Block ");
-            int z = x/0;
+            System.exit(1);
+            System.out.println("after try");
 
-            System.out.println("Exception Message::" + e.getMessage());
+
+        } catch (ArithmeticException e) {
+
+            System.out.println("Catch Block ");
+
+            System.out.println("After exit catch ");
+
+            //int z = x/0;
+
+            //System.out.println("Exception Message::" + e.getMessage());
 
         }
 
         finally {
+
             System.out.println("Finally Block ");
+            System.exit(1);
+            System.out.println("After exit finally ");
         }
         System.out.println("Outside Try-Catch Block ");
     }

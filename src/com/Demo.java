@@ -1,5 +1,8 @@
 package com;
 
+import com.java8practise.DemoInterface;
+import com.java8practise.ExceptionHandling.ExceptionChecks;
+import com.java8practise.Learn;
 import com.java8practise.Optionals.OptionalParameterImpl;
 import com.java8practise.PECS.ConsumerSuper.ConsumerSuperT;
 import com.java8practise.PECS.ProducerExtends.ProducerExtendsT;
@@ -11,6 +14,7 @@ public class Demo {
 
        //ExceptionChecks exceptionChecks = new ExceptionChecks();
         //exceptionChecks.methodExceptionTest();
+
 
        // Java8Streams java8Streams = new Java8Streams();
        // java8Streams.streamMethods();
@@ -32,6 +36,16 @@ public class Demo {
 
         PractiseQuestions practiseQuestions = new PractiseQuestions();
         practiseQuestions.solveQuestions();
+       // practiseQuestions.testMethod();
+
+       // Learn learn = new Learn();
+        //learn.addNumbers(2,3);
+        //DemoInterface.subtractNumbers(5,4);
+
+        //(new Generics()).operate();
+
+
+
 
 
     }
